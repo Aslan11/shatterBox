@@ -11,4 +11,14 @@ $(document).ready(function(){
 		$('.shatterHeader').removeClass("visible");		
 	})
 	
+	var numShards = $('.shard').length
+	
+	for (var i=1; i < numShards; i++){
+		var randNum = Math.floor((Math.random() * 9) + 1);
+		$('.shardContainer:nth-child('+i+')').css({"transition":"background ."+ randNum +"s, transform ."+ randNum +"s","-webkit-transition":"background ."+ randNum +"s, -webkit-transform ."+ randNum +"s"});
+		console.log(i);
+		console.log(randNum);
+	
+	}
+	
 });
